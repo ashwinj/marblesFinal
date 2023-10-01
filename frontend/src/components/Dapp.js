@@ -15,6 +15,7 @@ import { NoWalletDetected } from "./NoWalletDetected";
 import { ConnectWallet } from "./ConnectWallet";
 import { Loading } from "./Loading";
 import { Transfer } from "./Transfer";
+import { Goals } from "./Goals";
 import { TransactionErrorMessage } from "./TransactionErrorMessage";
 import { WaitingForTransactionMessage } from "./WaitingForTransactionMessage";
 import { NoTokensMessage } from "./NoTokensMessage";
@@ -146,11 +147,13 @@ export class Dapp extends React.Component {
               callback.
             */}
             {this.state.balance.gt(0) && (
-              <Transfer
-                transferTokens={(to, amount) =>
-                  this._transferTokens(to, amount)
-                }
-                tokenSymbol={this.state.tokenData.symbol}
+              // <Transfer
+              //   transferTokens={(to, amount) =>
+              //     this._transferTokens(to, amount)
+              //   }
+              //   tokenSymbol={this.state.tokenData.symbol}
+              // />
+              <Goals
               />
             )}
           </div>
